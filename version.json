@@ -1,5 +1,5 @@
 {
-  "version": "2.0.5",
+  "version": "9.9.9",
   "releasesUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/latest",
   "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.5/CdkPlugin-2.0.5.jar",
   "updateNotes": "混合更新方案：jsDelivr/GITHUB带缓存破坏，新增GITHUB_RELEASE源(GitHub API)，修复更新延迟问题",
