@@ -1,7 +1,8 @@
 {
-  "version": "2.0.1",
-  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.1/CdkPlugin-2.0.1.jar",
-  "updateNotes": "修复过期时间bug，优化数据存储，新增自动更新检查",
+  "version": "2.0.2",
+  "releasesUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/latest",
+  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.2/CdkPlugin-2.0.2.jar",
+  "updateNotes": "新增自动更新检查功能，集成GitHub Releases通知，修复过期时间解析bug",
   "releaseDate": "2026-08-10",
   "minServerVersion": "1.20",
   "requiredJava": "21"
