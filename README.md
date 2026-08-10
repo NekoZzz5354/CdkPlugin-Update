@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/version-2.0.4-blue?style=flat-square" alt="Version">
-  <img src="https://img.shields.io/badge/minecraft-1.20--1.21-green?style=flat-square" alt="Minecraft">
-  <img src="https://img.shields.io/badge/java-21+-orange?style=flat-square" alt="Java">
-  <img src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Version-2.0.4-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Minecraft-1.21+-green?style=flat-square" alt="Minecraft">
+  <img src="https://img.shields.io/badge/Java-21+-orange?style=flat-square" alt="Java">
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square" alt="License">
 </p>
 
 <h1 align="center">🎫 CDK Plugin</h1>
