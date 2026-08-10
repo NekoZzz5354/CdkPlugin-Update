@@ -1,11 +1,13 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/version-x.x.x-blue?style=flat-square" alt="Version">
-  <img src="https://img.shields.io/badge/minecraft-1.21+-green?style=flat-square" alt="Minecraft">
-  <img src="https://img.shields.io/badge/java-21+-orange?style=flat-square" alt="Java">
-  <img src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square" alt="License">
-</p>
-
 <h1 align="center">🎫 CDK Plugin</h1>
+
+<p align="center">
+  <a href="https://github.com/NekoZzz5354/CdkPlugin-Update/releases/latest">
+    <img src="https://img.shields.io/github/v/release/NekoZzz5354/CdkPlugin-Update?style=flat-square&label=Version">
+  </a>
+  <img src="https://img.shields.io/badge/Minecraft-1.21%2B-brightgreen?style=flat-square">
+  <img src="https://img.shields.io/badge/Java-21%2B-orange?style=flat-square">
+  <img src="https://img.shields.io/github/license/NekoZzz5354/CdkPlugin-Update?label=License&style=flat-square">
+</p>
 
 <p align="center">
   <b>轻量 · 安全 · 易用的 Minecraft 兑换码插件</b><br>
