@@ -47,7 +47,7 @@
 
 | 项目 | 最低版本 |
 |------|----------|
-| Minecraft | 1.20 |
+| Minecraft | 1.21 |
 | Java | 21 |
 | 服务端 | Spigot / Paper / Purpur |
 
