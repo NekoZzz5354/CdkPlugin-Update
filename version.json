@@ -1,9 +1,9 @@
 {
-  "version": "2.0.4-RC1",
+  "version": "2.0.5",
   "releasesUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/latest",
-  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.4-R1/CdkPlugin-2.0.4-RC1.jar",
-  "updateNotes": "新增update.source预选项(GITHUB/jsDelivr)，不再明写检查URL；新增version配置项由插件自维护，解决升级时版本号不更新问题",
+  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.5/CdkPlugin-2.0.5.jar",
+  "updateNotes": "混合更新方案：jsDelivr/GITHUB带缓存破坏，新增GITHUB_RELEASE源(GitHub API)，修复更新延迟问题",
   "releaseDate": "2026-08-10",
-  "minServerVersion": "1.20",
+  "minServerVersion": "1.21",
   "requiredJava": "21"
 }
