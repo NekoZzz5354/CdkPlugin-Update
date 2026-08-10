@@ -1,6 +1,6 @@
 {
   "version": "2.0.1",
-  "downloadUrl": "https://github.com/你的用户名/CdkPlugin-Update/releases/download/v2.0.1/CdkPlugin-2.0.1.jar",
+  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.1/CdkPlugin-2.0.1.jar",
   "updateNotes": "修复过期时间bug，优化数据存储，新增自动更新检查",
   "releaseDate": "2026-08-10",
   "minServerVersion": "1.20",
