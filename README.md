@@ -1,2 +1,215 @@
-# CdkPlugin-Update
-Cdk Plugin update info
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.0.4-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/minecraft-1.20--1.21-green?style=flat-square" alt="Minecraft">
+  <img src="https://img.shields.io/badge/java-21+-orange?style=flat-square" alt="Java">
+  <img src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square" alt="License">
+</p>
+
+<h1 align="center">🎫 CDK Plugin</h1>
+
+<p align="center">
+  <b>轻量 · 安全 · 易用的 Minecraft 兑换码插件</b><br>
+  为 Spigot / Paper / Purpur 服务端提供完整的 CDK 礼包兑换系统
+</p>
+
+---
+
+## ✨ 功能特性
+
+### 🎫 核心功能
+- **多模式 CDK 生成** — 支持随机字符、自定义前缀、批量生成
+- **灵活奖励配置** — 物品、指令、金币、经验，自由组合
+- **过期时间控制** — 每个 CDK 可设独立有效期
+- **一次性 / 多次使用** — 按需求配置兑换次数限制
+- **使用记录追踪** — 谁在什么时候兑换了什么，一目了然
+
+### 🛡️ 安全与稳定
+- **本地数据持久化** — 所有数据存储在 `plugins/CdkPlugin/` 目录，不依赖外部数据库
+- **智能配置迁移** — 版本更新时自动合并配置，**用户设置零丢失**，自动备份旧文件
+- **权限分级** — 管理员 / OP 权限隔离，防止误操作
+
+### 🔔 更新系统
+- **自动更新检查** — 启动 + 每 6 小时定时检查 GitHub Releases
+- **多渠道通知** — 控制台日志 + OP 聊天栏双重提醒
+- **一键跳转下载** — 通知消息附带 Releases 链接，点一下就到
+
+---
+
+## 📦 安装
+
+### 环境要求
+
+| 项目 | 最低版本 |
+|------|----------|
+| Minecraft | 1.20 |
+| Java | 21 |
+| 服务端 | Spigot / Paper / Purpur |
+
+### 安装步骤
+
+```bash
+# 1. 下载 CdkPlugin-2.0.4.jar
+# 2. 放入服务器 plugins/ 目录
+# 3. 重启服务器
+# 4. 编辑 plugins/CdkPlugin/config.yml 配置奖励内容
+# 5. 输入 /cdk reload 重载配置
+```
+
+---
+
+## 🚀 快速上手
+
+### 生成兑换码
+
+```bash
+# 生成一个随机 CDK（默认长度16，style-2）
+/cdk create
+
+# 批量生成 10 个，前缀 VIP
+/cdk create 10 VIP
+
+# 生成指定过期时间的 CDK
+/cdk create 5 EVENT 2026-12-31
+```
+
+### 兑换奖励
+
+```bash
+# 玩家输入
+/cdk redeem ABCD-EFGH-IJKL
+```
+
+### 管理指令
+
+| 指令 | 说明 |
+|------|------|
+| `/cdk create [数量] [前缀] [过期时间]` | 生成 CDK |
+| `/cdk list` | 查看所有未使用的 CDK |
+| `/cdk delete <代码>` | 删除指定 CDK |
+| `/cdk reload` | 重载配置文件 |
+| `/cdk version` | 查看插件版本和状态 |
+| `/cdk update` | 手动检查更新 |
+
+---
+
+## ⚙️ 配置说明
+
+`config.yml` 全字段带中文注释，开箱即用：
+
+```yaml
+# ===== 基础设置 =====
+prefix: "§6[CDK] §r"          # 聊天栏前缀
+default-length: 16              # CDK 默认长度
+default-style: "style-2"       # 默认样式（style-1: 纯数字 / style-2: 字母数字混合）
+
+# ===== 字符集 =====
+charset:
+  digits: true                  # 包含数字 0-9
+  uppercase: true               # 包含大写字母 A-Z
+  lowercase: true               # 包含小写字母 a-z
+
+# ===== 更新检查 =====
+update:
+  enabled: true
+  check-url: "https://cdn.jsdelivr.net/gh/NekoZzz5354/CdkPlugin-Update@main/version.json"
+  fallback-url: "https://raw.githubusercontent.com/NekoZzz5354/CdkPlugin-Update/main/version.json"
+  check-interval-hours: 6
+  releases-url: "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/latest"
+
+# ===== 配置迁移 =====
+migration:
+  enabled: true                 # 更新时自动合并配置
+  auto-backup: true             # 迁移前自动备份
+  backup-keep-count: 5          # 保留最近5个备份
+```
+
+---
+
+## 🔄 更新机制
+
+```
+插件启动
+  ↓
+读取 version.json（jsDelivr 加速）
+  ↓
+对比本地版本号
+  ↓
+发现新版本 → 控制台 + OP 聊天栏通知
+  ↓
+OP 点击链接 → GitHub Releases → 下载 jar → 替换重启
+  ↓
+插件自动迁移 config.yml（新字段补齐，旧配置保留）
+```
+
+### version.json 结构
+
+```json
+{
+  "version": "2.0.4",
+  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.4/CdkPlugin-2.0.4.jar",
+  "releasesUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/latest",
+  "updateNotes": "修复配置覆盖bug，新增智能配置迁移",
+  "releaseDate": "2026-08-10",
+  "minServerVersion": "1.20",
+  "requiredJava": "21"
+}
+```
+
+---
+
+## 📁 文件结构
+
+```
+plugins/CdkPlugin/
+├── config.yml              ← 主配置文件（自动生成 + 智能迁移）
+├── cdk-data.yml            ← CDK 数据持久化存储
+├── config.backup.*.yml     ← 自动备份文件
+└── logs/
+    └── cdk.log             ← 操作日志
+```
+
+---
+
+## 🔐 权限节点
+
+| 权限 | 说明 | 默认 |
+|------|------|------|
+| `cdk.admin` | 管理员权限（生成/删除/重载） | OP |
+| `cdk.use` | 使用 `/cdk redeem` 兑换 | 所有玩家 |
+| `cdk.update.notify` | 接收更新通知 | OP |
+
+---
+
+## 🐛 已知问题 & 解决方案
+
+| 问题 | 解决 |
+|------|------|
+| 更新检查失败 | 检查 `check-url` 是否可访问，或切换 `fallback-url` |
+| 颜色代码显示原始文本 | 确保服务端支持 `§` 颜色代码（Paper 默认支持） |
+| 配置项丢失 | v2.0.4+ 已修复，旧版请手动备份后升级 |
+
+---
+
+## 📜 版本历史
+
+| 版本 | 亮点 |
+|------|------|
+| **v2.0.4** | 🐛 修复配置覆盖 Bug，新增智能配置迁移器 |
+| **v2.0.3** | 🐛 修复 `§` 颜色代码不显示问题 |
+| **v2.0.2** | ✨ 新增自动更新检查 + `/cdk update` 指令 |
+| **v2.0.1** | ✨ 重构数据存储，本地持久化 |
+| **v2.0.0** | 🎉 V2 重构版本，全新架构 |
+
+---
+
+## 📄 License
+
+MIT License — 自由使用、修改、分发。
+
+---
+
+<p align="center">
+  Made with ❤️ for the Minecraft community<br>
+  <a href="https://github.com/NekoZzz5354/CdkPlugin-Update/releases">📦 Releases</a> ·
+  <a href="https://github.com/NekoZzz5354/CdkPlugin-Update/issues">🐛 Issues</a>
+</p>
