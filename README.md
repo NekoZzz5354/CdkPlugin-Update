@@ -217,7 +217,7 @@ plugins/CdkPlugin/
 
 | 版本 | 亮点 |
 |------|------|
-| **v2.0.4-R1** | 🔧 config.yml 的 version 改为插件自维护；更新源改为 jsDelivr/GITHUB 预选项切换 |
+| **v2.0.4-RC1** | 🔧 config.yml 的 version 改为插件自维护；更新源改为 jsDelivr/GITHUB 预选项切换 |
 | **v2.0.4** | 🐛 修复配置覆盖 Bug，新增智能配置迁移器 |
 | **v2.0.3** | 🐛 修复 `§` 颜色代码不显示问题 |
 | **v2.0.2** | ✨ 新增自动更新检查 + `/cdk update` 指令 |
