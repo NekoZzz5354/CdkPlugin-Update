@@ -1,8 +1,8 @@
 {
-  "version": "2.0.2",
+  "version": "2.0.3",
   "releasesUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/latest",
-  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.2/CdkPlugin-2.0.2.jar",
-  "updateNotes": "新增自动更新检查功能，集成GitHub Releases通知，修复过期时间解析bug",
+  "downloadUrl": "https://github.com/NekoZzz5354/CdkPlugin-Update/releases/download/v2.0.3/CdkPlugin-2.0.3.jar",
+  "updateNotes": "修复颜色代码显示问题，新增MessageUtil统一处理§颜色代码转换",
   "releaseDate": "2026-08-10",
   "minServerVersion": "1.20",
   "requiredJava": "21"
